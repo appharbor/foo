@@ -1,4 +1,6 @@
-﻿using Foo.Web.Controllers;
+﻿using System.Web.Mvc;
+using Foo.Web.Controllers;
+using Xunit;
 
 namespace Foo.Tests.Web.Controllers
 {
@@ -9,6 +11,13 @@ namespace Foo.Tests.Web.Controllers
 		public HomeControllerTest()
 		{
 			_controller = new HomeController();
+		}
+
+		[Fact]
+		public void IndexShouldReturnViewResult()
+		{
+			var result = _controller.Index();
+			Assert.IsType<ViewResult>(result);
 		}
 	}
 }
