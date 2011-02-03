@@ -1,6 +1,8 @@
-﻿namespace Foo.Web.Controllers
+﻿using System.Web.Mvc;
+
+namespace Foo.Web.Controllers
 {
-	public class HomeController
+	public class HomeController : Controller
 	{
 	}
 }
